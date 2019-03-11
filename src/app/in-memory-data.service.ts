@@ -8,16 +8,12 @@ import { Injectable } from '@angular/core';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 11, name: 'Mr. Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 1, link: 'http://dai.supervision.miist.fr/', name: 'DAI' },
+      { id: 2, link: 'http://supervision.miist.fr/', name: 'Supervision'},
+      { id: 3, link: 'http://versions.supervision.miist.fr/ihm/', name: 'Versions' },
+      { id: 4, link: 'http://check-tablespace.supervision.miist.fr/', name: 'Tablespace' },
+      { id: 5, link: 'http://connexion-sagtu-sirius.supervision.miist.fr/', name: 'Connexion SAGTU-Sirius' },
+
     ];
     return {heroes};
   }
