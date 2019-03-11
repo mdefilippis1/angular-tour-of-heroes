@@ -1,0 +1,11 @@
+div {
+  text-align: center;
+  color: #eee;
+  background-color: #607d8b;
+  padding: 20px 0;
+  border-radius: 15px;
+}
+
+div:hover {
+  cursor: pointer;
+}
