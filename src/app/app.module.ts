@@ -29,9 +29,7 @@ import { ExtLinkComponent } from './ext-link/ext-link.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+
 
   ],
   providers: [],

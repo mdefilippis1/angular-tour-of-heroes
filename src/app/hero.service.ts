@@ -17,6 +17,7 @@ const httpOptions = {
 export class HeroService {
 
   private heroesUrl = 'api/heroes';  // URL to web api
+  private machinesUrl = 'http://mesures.bascule.miist.fr/machine'
 
 
   constructor(private http: HttpClient,
@@ -30,6 +31,10 @@ export class HeroService {
   }
 
 
+
+  getMachines() {
+      return this.http.get(this.machinesUrl);
+    }
 
   /** GET hero by id. Will 404 if id not found */
   getHero(id: number): Observable<Hero> {

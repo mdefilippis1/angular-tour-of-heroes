@@ -11,16 +11,26 @@ import { HeroService } from '../hero.service';
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
 
+  machines: any = [];
+
   constructor(private heroService: HeroService) { }
 
   ngOnInit() {
     this.getHeroes();
+    this.getMachines();
   }
 
   getHeroes(): void {
     this.heroService.getHeroes()
       .subscribe(heroes => this.heroes = heroes);
   }
+
+  getMachines(): void {
+    this.heroService.getMachines()
+    .subscribe(machines => this.machines = machines);
+
+  }
+
 
   redirectExt(link) {
     window.location.href = link;
