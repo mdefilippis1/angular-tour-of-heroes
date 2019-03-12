@@ -7,8 +7,13 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 
 const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    };
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      'X-MIIST-ID': 'a',
+      'X-MIIST-DATE': '2030-03-12-16-02-04',
+      'X-MIIST-SIGNATURE': 'a'
+    })
+  };
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +22,7 @@ const httpOptions = {
 export class HeroService {
 
   private heroesUrl = 'api/heroes';  // URL to web api
-  private machinesUrl = 'http://mesures.bascule.miist.fr/machine'
+  private machinesUrl = 'http://mesures.supervision.miist.fr/machine/cre-ssag-1/sonde/coupuresagtu-sirius/mesure?page_number=0&page_size=3'
 
 
   constructor(private http: HttpClient,
@@ -32,8 +37,9 @@ export class HeroService {
 
 
 
+
   getMachines() {
-      return this.http.get(this.machinesUrl);
+      return this.http.get(this.machinesUrl, httpOptions);
     }
 
   /** GET hero by id. Will 404 if id not found */
