@@ -7,5 +7,7 @@ div {
 }
 
 div:hover {
-  cursor: pointer;
+    background-color: #eee;
+    cursor: pointer;
+    color: #607d8b;
 }
